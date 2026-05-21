@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 104 104" role="img" aria-label="DAIH">
+  <rect width="104" height="104" fill="#111713"/>
+  <rect x="16" y="16" width="24" height="24" fill="none" stroke="#fffdf8" stroke-width="4"/>
+  <rect x="64" y="64" width="24" height="24" fill="none" stroke="#fffdf8" stroke-width="4"/>
+  <rect x="30" y="18" width="26" height="20" fill="#111713"/>
+  <rect x="48" y="66" width="26" height="20" fill="#111713"/>
+  <text x="52" y="59" text-anchor="middle" fill="#fffdf8" font-family="Georgia, serif" font-size="22" font-weight="700">DAIH</text>
+</svg>

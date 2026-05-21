@@ -4,7 +4,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="DAIH at COLM 2026: a workshop on deployment opportunities and risks for LLMs and VLMs in healthcare.">
+    <meta property="og:title" content="DAIH | COLM 2026 Workshop">
+    <meta property="og:description" content="A COLM 2026 workshop on deployment opportunities and risks for LLMs and VLMs in healthcare.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://daih2026.github.io/">
+    <meta property="og:image" content="https://daih2026.github.io/assets/preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DAIH | COLM 2026 Workshop">
+    <meta name="twitter:description" content="A COLM 2026 workshop on deployment opportunities and risks for LLMs and VLMs in healthcare.">
+    <meta name="twitter:image" content="https://daih2026.github.io/assets/preview.png">
     <title>DAIH | COLM 2026 Workshop</title>
+    <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
@@ -544,21 +556,44 @@
         margin-bottom: 0;
       }
 
+      .support-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .support-card {
+        min-height: 180px;
+        padding: 24px;
+        background: var(--paper);
+        border: 1px solid var(--line);
+      }
+
+      .support-card strong {
+        display: inline-grid;
+        place-items: center;
+        width: 36px;
+        height: 36px;
+        margin-bottom: 20px;
+        color: var(--paper);
+        background: var(--teal);
+        border-radius: 50%;
+      }
+
+      .support-card:nth-child(2) strong { background: var(--coral); }
+      .support-card:nth-child(3) strong { background: var(--blue); }
+      .support-card:nth-child(4) strong { background: var(--gold); }
+
+      .support-card p {
+        margin: 10px 0 0;
+        color: var(--muted);
+        font-size: 15px;
+      }
+
       .schedule {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 26px;
-      }
-
-      .schedule-tbd {
-        background: rgba(255, 253, 248, 0.82);
-        border: 1px solid var(--line);
-        padding: 80px 24px;
-        text-align: center;
-        font-family: "Fraunces", Georgia, serif;
-        font-size: 36px;
-        color: var(--muted);
-        letter-spacing: 0.04em;
       }
 
       .schedule-column {
@@ -751,7 +786,8 @@
         .stat-grid,
         .bar-grid,
         .people-grid,
-        .sponsors {
+        .sponsors,
+        .support-grid {
           grid-template-columns: repeat(2, minmax(0, 1fr));
         }
 
@@ -782,6 +818,7 @@
         .bar-grid,
         .timeline,
         .tracks,
+        .support-grid,
         .people-grid,
         .sponsors {
           grid-template-columns: 1fr;
@@ -821,9 +858,10 @@
         <div class="nav-links">
           <a href="#about">About</a>
           <a href="#submissions">Submissions</a>
+          <a href="#support">Support</a>
           <a href="#schedule">Schedule</a>
           <a href="#people">People</a>
-          <a href="#sponsors">Sponsors</a>
+          <a href="sponsors.html">Sponsor</a>
         </div>
       </div>
     </nav>
@@ -837,6 +875,7 @@
             <p class="hero-copy">A full-day workshop on what it actually takes to responsibly deploy language and vision-language models in clinical settings.</p>
             <div class="hero-actions">
               <a class="button light" href="#submissions">Submit Work</a>
+              <a class="button ghost" href="#support">Support Students</a>
               <a class="button ghost" href="#schedule">View Schedule</a>
             </div>
           </div>
@@ -902,9 +941,9 @@
             <p>We will solicit non-archival submissions through OpenReview using double-blind review. Review will emphasize relevance, rigor, clarity, clinical grounding, and value to a community trying to deploy responsibly.</p>
           </div>
           <div class="timeline" aria-label="Important dates">
-            <div class="deadline"><time datetime="2026-06-01">June 1</time><span>Submission opens</span></div>
             <div class="deadline"><time datetime="2026-06-23">June 23</time><span>Submission deadline</span></div>
             <div class="deadline"><time datetime="2026-07-10">July 10</time><span>Reviews due</span></div>
+            <div class="deadline"><time datetime="2026-07-17">July 17</time><span>Internal decision</span></div>
             <div class="deadline"><time datetime="2026-07-24">July 24</time><span>Notification</span></div>
           </div>
           <div class="tracks">
@@ -920,6 +959,24 @@
         </div>
       </section>
 
+      <section id="support">
+        <div class="wrap">
+          <div class="section-head">
+            <div>
+              <span class="label">Student and Junior Researcher Support</span>
+              <h2>Making Participation Possible</h2>
+            </div>
+            <p>Sponsorship will directly support student travel awards, registration assistance, paper prizes, poster-session infrastructure, and participation from clinicians, interdisciplinary teams, and researchers who might otherwise be underrepresented at COLM.</p>
+          </div>
+          <div class="support-grid">
+            <article class="support-card"><strong>1</strong><h3>Travel Awards</h3><p>Help students and early-career researchers attend DAIH in San Francisco.</p></article>
+            <article class="support-card"><strong>2</strong><h3>Registration Support</h3><p>Reduce participation barriers for trainees, clinicians, and interdisciplinary contributors.</p></article>
+            <article class="support-card"><strong>3</strong><h3>Paper Prizes</h3><p>Recognize rigorous research, deployment case reports, negative results, and community value.</p></article>
+            <article class="support-card"><strong>4</strong><h3>Community Building</h3><p>Support roundtables, poster interactions, reviewer coordination, and junior researcher visibility.</p></article>
+          </div>
+        </div>
+      </section>
+
       <section id="schedule">
         <div class="wrap">
           <div class="section-head">
@@ -929,7 +986,24 @@
             </div>
             <p>A full-day program balancing invited talks, contributed spotlights, poster sessions, a structured roundtable lunch, and a deployment-focused panel.</p>
           </div>
-          <div class="schedule-tbd">TBD</div>
+          <div class="schedule">
+            <div class="schedule-column">
+              <h3>Morning</h3>
+              <div class="slot"><time>09:00</time><div><strong>Opening Remarks</strong><span>Organizers</span></div></div>
+              <div class="slot"><time>09:15</time><div><strong>Keynote: <a href="https://profiles.stanford.edu/sanmi-koyejo">Sanmi Koyejo</a></strong><span>Trustworthy AI, evaluation, and socially responsible machine learning</span></div></div>
+              <div class="slot"><time>10:05</time><div><strong>Invited Talk: <a href="https://aim.mgh.harvard.edu/team/danielle-bitterman">Danielle Bitterman</a></strong><span>LLM implementation and evaluation</span></div></div>
+              <div class="slot"><time>10:55</time><div><strong>Contributed Spotlights and Poster Session I</strong><span>Selected research and deployment reports</span></div></div>
+              <div class="slot"><time>12:00</time><div><strong>Invited Talk: <a href="https://www.medicine.wisc.edu/directory/afshar_majid">Majid Afshar</a></strong><span>Building next-generation AI-native health systems</span></div></div>
+            </div>
+            <div class="schedule-column">
+              <h3>Midday and Afternoon</h3>
+              <div class="slot"><time>12:45</time><div><strong>Roundtable Lunch</strong><span>Stakeholder needs, deployment risks, industry constraints, and research needs</span></div></div>
+              <div class="slot"><time>14:00</time><div><strong>Invited Talk: <a href="https://www2.eecs.berkeley.edu/Faculty/Homepages/emmapierson.html">Emma Pierson</a></strong><span>Clinical AI deployment across health institutions</span></div></div>
+              <div class="slot"><time>14:50</time><div><strong>Contributed Spotlights and Poster Session II</strong><span>Selected research and deployment reports</span></div></div>
+              <div class="slot"><time>16:05</time><div><strong>Panel Discussion</strong><span>Wei Liu, Corinna Loeckenhoff, Chufan Gao, Tymor Hamamsy or Martin Seneviratne, and Tristan Naumann</span></div></div>
+              <div class="slot"><time>17:15</time><div><strong>Closing Remarks</strong><span>Organizers</span></div></div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -949,7 +1023,7 @@
             </article>
             <article class="person">
               <div class="person-photo"><img src="assets/shan-chen.jpg" alt="Shan Chen"></div>
-              <div class="person-body"><h3>Shan Chen</h3><p>Phare Health · R37 Lab</p><a href="https://shanchen.dev/">Profile</a></div>
+              <div class="person-body"><h3>Shan Chen</h3><p>Phare Health · R1 RCM</p><a href="https://shanchen.dev/">Profile</a></div>
             </article>
             <article class="person">
               <div class="person-photo"><img class="tight-crop" src="https://xiaoyuxin1002.github.io/images/profile.png" alt="Yuxin Xiao"></div>
@@ -977,7 +1051,7 @@
             </article>
             <article class="person">
               <div class="person-photo"><img src="assets/jack-gallifant.jpeg" alt="Jack Gallifant"></div>
-              <div class="person-body"><h3>Jack Gallifant</h3><p>Phare Health · R37 Lab</p><a href="https://www.jackgallifant.com/">Profile</a></div>
+              <div class="person-body"><h3>Jack Gallifant</h3><p>Phare Health · R1 RCM</p><a href="https://www.jackgallifant.com/">Profile</a></div>
             </article>
             <article class="person">
               <div class="person-photo"><img src="https://www.cs.cornell.edu/sites/default/files/2025-08/wang-angelina.jpg" alt="Angelina Wang"></div>
@@ -1005,7 +1079,7 @@
             <p>DAIH sponsorship supports student travel, registration assistance, junior researcher visibility, paper prizes, and a workshop format designed for serious cross-community exchange. Confirmed sponsors will be listed here directly as support is finalized.</p>
           </div>
           <div class="sponsors">
-            <article class="sponsor-card"><h3>Confirmed Sponsors</h3><strong>Coming Soon</strong><p>We will list confirmed sponsors by recognition level after company approvals are complete.</p></article>
+            <article class="sponsor-card"><h3>Sponsor DAIH</h3><strong><a href="sponsors.html">View Levels</a></strong><p>Review sponsorship tiers and benefits for supporting student participation and responsible clinical AI deployment research.</p></article>
             <article class="sponsor-card"><h3>Student Support</h3><strong>Travel and Prizes</strong><p>Sponsor support will prioritize student travel awards, registration assistance, paper prizes, and junior researcher participation.</p></article>
           </div>
         </div>
