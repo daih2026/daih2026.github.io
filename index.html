@@ -556,6 +556,62 @@
         margin-bottom: 0;
       }
 
+      .cfp-topics {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+        margin-top: 22px;
+      }
+
+      .cfp-topic {
+        padding: 26px;
+        background: var(--paper);
+        border: 1px solid var(--line);
+      }
+
+      .cfp-topic h4 {
+        margin: 0 0 12px 0;
+        font-family: "Fraunces", Georgia, serif;
+        font-size: 20px;
+        color: var(--ink);
+      }
+
+      .cfp-topic ul {
+        margin: 0;
+        padding-left: 20px;
+        color: #35403a;
+      }
+
+      .cfp-topic li {
+        margin-bottom: 6px;
+        font-size: 15px;
+        line-height: 1.5;
+      }
+
+      .cfp-list {
+        margin-top: 18px;
+        display: grid;
+        grid-template-columns: minmax(160px, 200px) minmax(0, 1fr);
+        gap: 14px 28px;
+        border-top: 1px solid var(--line);
+        padding-top: 18px;
+      }
+
+      .cfp-list dt {
+        font-weight: 800;
+        color: var(--ink);
+        font-size: 15px;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+      }
+
+      .cfp-list dd {
+        margin: 0;
+        color: #35403a;
+        font-size: 16px;
+        line-height: 1.55;
+      }
+
       .support-grid {
         display: grid;
         grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -791,6 +847,10 @@
           grid-template-columns: repeat(2, minmax(0, 1fr));
         }
 
+        .cfp-topics {
+          grid-template-columns: 1fr;
+        }
+
         .timeline {
           grid-template-columns: repeat(2, minmax(0, 1fr));
         }
@@ -820,8 +880,13 @@
         .tracks,
         .support-grid,
         .people-grid,
-        .sponsors {
+        .sponsors,
+        .cfp-list {
           grid-template-columns: 1fr;
+        }
+
+        .cfp-list dt {
+          margin-top: 6px;
         }
 
         .deadline,
@@ -857,9 +922,9 @@
         </a>
         <div class="nav-links">
           <a href="#about">About</a>
-          <a href="#submissions">Submissions</a>
+          <a href="#submissions">Call for Papers</a>
           <a href="#schedule">Schedule</a>
-          <a href="#people">People</a>
+          <a href="#people">Organizers</a>
         </div>
       </div>
     </nav>
@@ -874,7 +939,7 @@
             <p class="hero-copy" style="margin-top: 12px;">Contact: <a href="mailto:colm.daih2026@gmail.com" style="color: inherit; font-weight: 800; border-bottom: 2px solid currentColor;">colm.daih2026@gmail.com</a></p>
             <div class="hero-actions">
               <a class="button light" href="https://openreview.net/group?id=colmweb.org/COLM/2026/Workshop/DAIH">Submit Work</a>
-              <a class="button ghost" href="#schedule">View Schedule</a>
+              <a class="button ghost" href="#submissions">Call for Papers</a>
             </div>
           </div>
           <aside class="identity-board" aria-label="DAIH identity and workshop highlights">
@@ -922,10 +987,6 @@
               <p>Multimodal clinical applications, human-AI collaboration, operational lessons, and the practical reality of production deployment.</p>
             </article>
           </div>
-          <div class="callout">
-            <h3>Roundtables Built for Cross-Community Exchange</h3>
-            <p>Lunch discussions will be anchored by industry leaders, senior PIs, and physician-scientists, with tables focused on stakeholder needs, real deployment risks, liability and regulatory constraints, integration challenges, and research needs that rarely surface in benchmark papers.</p>
-          </div>
         </div>
       </section>
 
@@ -933,30 +994,88 @@
         <div class="wrap">
           <div class="section-head">
             <div>
-              <span class="label">Call for Papers</span>
-              <h2>Submissions</h2>
+              <span class="label">DAIH @ COLM 2026</span>
+              <h2>Call for Papers</h2>
             </div>
-            <p>We solicit non-archival submissions through <a href="https://openreview.net/group?id=colmweb.org/COLM/2026/Workshop/DAIH" style="border-bottom: 2px solid rgba(15, 118, 110, 0.35);">OpenReview</a> using double-blind review. <strong>Papers must use the <a href="https://github.com/COLM-org/Template/releases/tag/2026" style="border-bottom: 2px solid rgba(15, 118, 110, 0.35);">COLM 2026 LaTeX template</a>.</strong></p>
+            <p>We invite non-archival submissions on the responsible deployment of large language and vision-language models in clinical settings.</p>
           </div>
+
           <div class="timeline" aria-label="Important dates">
             <div class="deadline"><time datetime="2026-05-23">May 23</time><span>Submissions open</span></div>
             <div class="deadline"><time datetime="2026-06-23">June 23</time><span>Submission deadline</span></div>
             <div class="deadline"><time datetime="2026-07-10">July 10</time><span>Reviews due</span></div>
             <div class="deadline"><time datetime="2026-07-24">July 24</time><span>Notification</span></div>
           </div>
+          <p style="margin-top: 14px; color: var(--muted); font-size: 14px;">All deadlines are Anywhere on Earth (AoE).</p>
+
           <div style="margin-top: 28px; display: flex; flex-wrap: wrap; gap: 12px;">
             <a class="button" href="https://openreview.net/group?id=colmweb.org/COLM/2026/Workshop/DAIH">Submit on OpenReview</a>
           </div>
+
+          <h3 style="margin-top: 56px; font-family: 'Fraunces', Georgia, serif; font-size: 28px;">Topics</h3>
+          <p style="margin-top: 8px; color: #35403a;">We welcome novel work relating to the responsible deployment of LLMs and VLMs in healthcare, including (but not limited to):</p>
+          <div class="cfp-topics">
+            <article class="cfp-topic">
+              <h4>Real-world deployment and clinical integration</h4>
+              <ul>
+                <li>Multimodal clinical reasoning and decision support</li>
+                <li>Human–AI collaboration in clinical workflows</li>
+                <li>Operational integration and workflow design</li>
+                <li>Clinical documentation, summarization, and chart review</li>
+                <li>Patient-facing communication and health literacy</li>
+                <li>Negative results and failure case analyses from real-world deployments</li>
+                <li>Lessons learned from industry and health system implementations</li>
+              </ul>
+            </article>
+            <article class="cfp-topic">
+              <h4>Safety and reliability</h4>
+              <ul>
+                <li>Clinical evaluation beyond benchmark accuracy</li>
+                <li>Hallucination detection, characterization, and mitigation in medical contexts</li>
+                <li>Robustness under temporal, institutional, and demographic distribution shift</li>
+                <li>Failure-mode characterization and safety monitoring</li>
+                <li>Post-deployment surveillance and error analysis</li>
+              </ul>
+            </article>
+            <article class="cfp-topic">
+              <h4>Equity, privacy, and governance</h4>
+              <ul>
+                <li>Fairness and bias auditing across patient populations</li>
+                <li>Privacy-preserving methods for clinical LLM/VLM deployment</li>
+                <li>Regulatory compliance and emerging governance frameworks</li>
+                <li>Accountability and liability in clinical AI systems</li>
+              </ul>
+            </article>
+          </div>
+
+          <h3 style="margin-top: 56px; font-family: 'Fraunces', Georgia, serif; font-size: 28px;">Submission Tracks</h3>
+          <p style="margin-top: 8px; color: #35403a;">We solicit non-archival submissions in two categories.</p>
           <div class="tracks">
             <article class="track">
               <h3>Research Papers</h3>
-              <p>Up to 8 pages excluding references. Technical work on evaluation, safety, robustness, multimodal modeling, fairness, privacy, governance, monitoring, or workflow integration.</p>
+              <p>Up to 8 pages excluding references. Technical work on evaluation, safety, robustness, multimodal modeling, fairness, privacy, governance, monitoring, or workflow integration. Accepted papers will be presented as spotlight talks or posters.</p>
             </article>
             <article class="track">
               <h3>Deployment Case Reports</h3>
-              <p>Up to 4 pages excluding references. Practical accounts from clinical, operational, or industry deployments, including work-in-progress, negative results, and lessons learned.</p>
+              <p>Up to 4 pages excluding references. Practical accounts from clinical, operational, or industry deployments — including work-in-progress, negative results, and lessons learned. Accepted case reports will be presented as posters.</p>
             </article>
           </div>
+
+          <h3 style="margin-top: 56px; font-family: 'Fraunces', Georgia, serif; font-size: 28px;">Submission Guidelines</h3>
+          <dl class="cfp-list">
+            <dt>Platform</dt>
+            <dd><a href="https://openreview.net/group?id=colmweb.org/COLM/2026/Workshop/DAIH" style="border-bottom: 2px solid rgba(15, 118, 110, 0.35);">OpenReview</a></dd>
+            <dt>Format</dt>
+            <dd><strong>Papers must use the <a href="https://github.com/COLM-org/Template/releases/tag/2026" style="border-bottom: 2px solid rgba(15, 118, 110, 0.35);">COLM 2026 LaTeX template</a>.</strong></dd>
+            <dt>Review process</dt>
+            <dd>Double-blind. Authors should anonymize their submissions accordingly; papers that are not properly anonymized will be desk rejected. Related arXiv papers by the same authors do not break anonymity; if cited, they should be cited in third person.</dd>
+            <dt>Conflict of interest</dt>
+            <dd>Conflicts will be managed per COLM policy. Conflicted organizers will be recused from assignment, discussion, and decisions for affected papers.</dd>
+            <dt>Dual-submission policy</dt>
+            <dd>We accept submissions of ongoing unpublished work as well as work currently in submission elsewhere. We also welcome substantial extensions of works previously presented at non-archival venues. However, we do not accept work that has already been published in a journal or included in conference proceedings (including the COLM main conference).</dd>
+            <dt>LLM usage policy</dt>
+            <dd>Authors must follow <a href="https://colmweb.org/cfp.html" style="border-bottom: 2px solid rgba(15, 118, 110, 0.35);">COLM 2026 policies on Large Language Model usage</a>.</dd>
+          </dl>
         </div>
       </section>
 
@@ -995,9 +1114,8 @@
           <div class="section-head">
             <div>
               <span class="label">Organizing Team</span>
-              <h2>People</h2>
+              <h2>Organizers</h2>
             </div>
-            <p>A cross-institutional team spanning medical AI, clinical NLP, human-AI interaction, safety, fairness, governance, and health-system deployment.</p>
           </div>
           <div class="people-grid">
             <article class="person">
