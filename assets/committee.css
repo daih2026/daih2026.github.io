@@ -1,0 +1,48 @@
+.committee-hero {
+  padding: 88px 0;
+  color: var(--paper);
+  background: radial-gradient(ellipse at 85% 10%, #21463d, transparent 60%), var(--ink);
+  border-bottom: 5px solid var(--teal);
+}
+.committee-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 290px;
+  align-items: center;
+  gap: 70px;
+}
+.committee-hero h1 { font-size: clamp(46px, 5.8vw, 76px); line-height: 1.08; }
+.committee-lede { max-width: 640px; margin: 28px 0; color: #c4d1ca; font-size: 19px; }
+.committee-hero .button { gap: 24px; }
+.committee-note { padding: 32px; border: 1px solid #51665a; background: #ffffff08; }
+.committee-note .label { color: #9fe2d9; }
+.committee-note strong { display: block; font: 112px/1.1 "Fraunces", Georgia, serif; color: #b8e2cd; }
+.committee-note > span:not(.label) { display: block; margin-top: 18px; font-size: 19px; }
+.committee-note p { padding-top: 24px; margin: 24px 0 0; border-top: 1px solid #51665a; color: #c4d1ca; font-size: 14px; }
+.committee-section h2 { font-size: clamp(34px, 4.5vw, 54px); }
+.directory-heading { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; color: var(--muted); font-size: 13px; }
+.directory-heading span:first-child { color: var(--teal); font-weight: 800; }
+.committee-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 28px; padding: 0; margin: 0; list-style: none; }
+.committee-grid li { min-width: 0; border-top: 1px solid var(--line); }
+.committee-grid a { display: flex; align-items: center; justify-content: space-between; gap: 14px; min-height: 76px; padding: 16px 12px; font-size: 16px; font-weight: 600; transition: background .15s, color .15s; }
+.committee-grid a:hover { background: var(--paper); color: var(--teal); }
+.profile-arrow { flex-shrink: 0; color: var(--teal); font-size: 19px; }
+.committee-thanks { margin-top: 56px; padding: 32px; border-left: 4px solid var(--teal); background: var(--paper); }
+.committee-thanks p { margin: 0; font: 25px/1.4 "Fraunces", Georgia, serif; }
+.nav-links a[aria-current="page"] { color: var(--teal); background: #0f766e12; }
+@media (max-width: 1000px) {
+  .committee-intro { grid-template-columns: minmax(0, 1fr) 230px; gap: 30px; }
+  .committee-note { padding: 24px; }
+  .committee-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 20px; }
+}
+@media (max-width: 650px) {
+  .committee-hero { padding: 52px 0; }
+  .committee-intro { grid-template-columns: 1fr; gap: 36px; }
+  .committee-hero h1 { font-size: 46px; }
+  .committee-note strong { font-size: 80px; }
+  .committee-grid { grid-template-columns: 1fr; }
+  .committee-grid a { min-height: 65px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .committee-grid a { transition: none; }
+}
